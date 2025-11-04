@@ -1,0 +1,6 @@
+opencv-python>=4.12.0
+imutils>=0.5.4
+plyer>=2.1.0
+pygame>=2.6.1
+PyQt5>=5.15.11
+

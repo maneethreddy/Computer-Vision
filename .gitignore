@@ -1,0 +1,67 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data and models
+*.pkl
+*.csv
+*.mp4
+*.avi
+*.mkv
+*.wav
+*.log
+*.jpg
+*.jpeg
+*.png
+*.yml
+
+# Keep directory structure but ignore contents
+!**/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+uploads/
+templates/
+trained_model/
+models/
+data/
+videos/
+uploads/
+dataset/
+

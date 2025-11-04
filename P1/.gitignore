@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Data and models
+data/*.csv
+models/*.pkl
+videos/*.mp4
+videos/*.avi
+videos/*.mkv
+
+# Keep directory structure
+!data/.gitkeep
+!models/.gitkeep
+!videos/.gitkeep
+
+# Assets (fruit images can be regenerated)
+# But keep the directory
+!assets/fruits/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db
+
