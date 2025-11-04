@@ -338,11 +338,13 @@ class FruitNinja:
             frame: Current camera frame
             dt: Delta time since last frame
         """
-        if self.game_over:
-            return
-        
         # Extract hand landmarks
         landmarks, annotated_frame = self.landmark_extractor.process_frame(frame)
+        
+        if self.game_over:
+            # Draw UI even when game is over
+            self.draw_ui(annotated_frame)
+            return annotated_frame
         
         # Detect slicing motion
         is_slice, slice_start, slice_end = self.slice_detector.detect_slice(landmarks)
@@ -481,8 +483,12 @@ def main():
     try:
         while True:
             ret, frame = cap.read()
-            if not ret:
+            if not ret or frame is None:
                 break
+            
+            # Check if frame is valid
+            if frame.size == 0:
+                continue
             
             # Flip frame horizontally for mirror effect
             frame = cv2.flip(frame, 1)
@@ -494,6 +500,10 @@ def main():
             
             # Update game
             game_frame = game.update(frame, dt)
+            
+            # Check if game_frame is valid before displaying
+            if game_frame is None or game_frame.size == 0:
+                continue
             
             # Display frame
             cv2.imshow("Fruit Ninja", game_frame)
